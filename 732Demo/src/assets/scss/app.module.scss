@@ -1,0 +1,16 @@
+.main_container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .leftbar {
+        flex: 1;
+        padding: 10px 15px 10px 15px;
+        border-right: 1px solid rgb(213, 211, 211);
+    }
+
+    .content {
+        flex: 4;
+        padding: 3%;
+    }
+}
