@@ -24,5 +24,17 @@
         position: relative;
         flex: 4;
         padding: 3%;
+
+        .login_link {
+            display: flex;
+            justify-content: space-between;
+            height: 30px;
+            margin-bottom: 3%;
+        
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
 }

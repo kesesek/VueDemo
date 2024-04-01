@@ -13,17 +13,6 @@ defineProps({
 </script>
 
 <template>
-    <div :class="styles.login_link">
-        <div>
-            <el-icon :size="20" style="margin-right: 30px"><ArrowLeft /></el-icon>
-            <el-icon :size="20"><ArrowRight /></el-icon>
-        </div>
-        <div>
-            <el-icon :size="20" style="margin-right: 30px"><Search /></el-icon>
-            <el-icon :size="20"><User/></el-icon>
-
-        </div>
-    </div>
     <div :class="styles.home_content">
         <div :class="styles.popular_albums">
             <div :class="styles.content_title">

@@ -50,6 +50,18 @@ import styles from '../src/assets/scss/app.module.scss';
 
     <!-- component -->
     <div :class="styles.content">
+      <div :class="styles.login_link">
+        <div>
+            <el-icon :size="20" style="margin-right: 30px"><ArrowLeft /></el-icon>
+            <el-icon :size="20"><ArrowRight /></el-icon>
+        </div>
+        <div>
+            <el-icon :size="20" style="margin-right: 30px"><Search /></el-icon>
+            <el-icon :size="20"><User/></el-icon>
+
+        </div>
+      </div>
+
       <RouterView />
     </div>
 
