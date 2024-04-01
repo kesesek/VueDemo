@@ -5,10 +5,6 @@ import styles from '../src/assets/scss/app.module.scss';
 
 <template>
     <!-- left bar -->
-    <!-- 
-      When using CSS Modules in Vue, use `v-bind:class` or `:class`
-      to dynamically bind HTML attributes to expressions.
-    -->
     <div :class="styles.main_container">
 
       <div :class="styles.leftbar">
@@ -17,18 +13,38 @@ import styles from '../src/assets/scss/app.module.scss';
         <div>
           <h4>Discover</h4>
           <ul>
-            <li>Home</li>
-            <li>Browse</li>
-            <li>Radio</li>
+            <li>
+              <el-icon :size="20" style="margin-right: 10px"><House /></el-icon>
+              <p>Home</p>
+            </li>
+            <li>
+              <el-icon :size="20" style="margin-right: 10px"><Compass /></el-icon>
+              <p>Browse</p>
+            </li>
+            <li>
+              <el-icon :size="20" style="margin-right: 10px"><Headset /></el-icon>
+              <p>Radio</p>
+            </li>
           </ul>
         </div>
 
         <br>
         <h4>Library</h4>
         <ul>
-          <li>Playlists</li>
-          <li>Songs</li>
-          <li>Personalized picks</li>
+          <li>
+            <el-icon :size="20" style="margin-right: 10px"><Guide /></el-icon>
+            <p>Playlists</p>
+          </li>
+          <li>
+            <el-icon :size="20" style="margin-right: 10px"><VideoPlay /></el-icon>
+            <p>Songs</p>
+          </li>
+          <li>
+            <el-icon :size="20" style="margin-right: 10px"><Star /></el-icon>
+            <p>
+              Personalized picks
+            </p>
+          </li>
         </ul>
       </div>
 
