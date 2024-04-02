@@ -29,7 +29,7 @@ const route = useRoute()
             </li>
           </RouterLink>
 
-          <RouterLink to="#">
+          <RouterLink to="/radio">
             <li>
               <el-icon :size="20" style="margin-right: 10px"><Headset /></el-icon>
               <p>Radio</p>
@@ -41,21 +41,21 @@ const route = useRoute()
       <br />
       <h4>Library</h4>
       <ul>
-        <RouterLink to="#">
+        <RouterLink to="/playlists">
           <li>
             <el-icon :size="20" style="margin-right: 10px"><Guide /></el-icon>
             <p>Playlists</p>
           </li>
         </RouterLink>
 
-        <RouterLink to="#">
+        <RouterLink to="/songs">
           <li>
             <el-icon :size="20" style="margin-right: 10px"><VideoPlay /></el-icon>
             <p>Songs</p>
           </li>
         </RouterLink>
 
-        <RouterLink to="#">
+        <RouterLink to="/personalized_picks">
           <li>
             <el-icon :size="20" style="margin-right: 10px"><Star /></el-icon>
             <p>Personalized picks</p>
