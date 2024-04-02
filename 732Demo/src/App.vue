@@ -1,14 +1,17 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
 import { useRoute } from 'vue-router'
+import { store } from './store/store'
+import LoginModal from './components/LoginModal.vue'
 import styles from '../src/assets/scss/app.module.scss'
 
 const route = useRoute()
 </script>
 
 <template>
-  <!-- left bar -->
   <div :class="styles.main_container">
+
+    <!-- left bar -->
     <div :class="styles.leftbar">
       <h3>Music App</h3>
       <br />
@@ -71,13 +74,20 @@ const route = useRoute()
           <el-icon :size="20" style="margin-right: 30px"><ArrowLeft /></el-icon>
           <el-icon :size="20"><ArrowRight /></el-icon>
         </div>
+        <div v-if="store.username" style="font-weight: bold; font-size: 25px">
+          Hello, {{ store.username }}
+        </div>
         <div>
           <el-icon :size="20" style="margin-right: 30px"><Search /></el-icon>
-          <el-icon :size="20"><User /></el-icon>
+          <a @click="store.isModalOpen = true">
+            <el-icon :size="20"><User /></el-icon>
+          </a>
+          <LoginModal/>
         </div>
       </div>
 
       <RouterView />
+
     </div>
   </div>
 </template>
