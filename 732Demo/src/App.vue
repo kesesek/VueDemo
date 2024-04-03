@@ -1,11 +1,20 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
+import { onMounted } from 'vue';
 import { useRoute } from 'vue-router'
 import { store } from './store/store'
 import LoginModal from './components/LoginModal.vue'
 import styles from '../src/assets/scss/app.module.scss'
 
 const route = useRoute()
+
+onMounted(() => {
+  const username = localStorage.getItem('username');
+  if (username) {
+    store.isUserLogin = true;
+    store.username = username;
+  }
+});
 </script>
 
 <template>
