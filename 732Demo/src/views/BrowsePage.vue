@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-    <div>
-        this is broswse page.
-    </div>
+  <div>this is broswse page.</div>
 </template>

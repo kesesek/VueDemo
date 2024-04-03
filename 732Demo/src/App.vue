@@ -1,25 +1,33 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
-import { onMounted } from 'vue';
-import { useRoute } from 'vue-router'
+import { onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { store } from './store/store'
 import LoginModal from './components/LoginModal.vue'
 import styles from '../src/assets/scss/app.module.scss'
 
 const route = useRoute()
+const router = useRouter()
 
 onMounted(() => {
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('username')
   if (username) {
-    store.isUserLogin = true;
-    store.username = username;
+    store.isUserLogin = true
+    store.username = username
   }
-});
+})
+
+function goBack() {
+  router.go(-1)
+}
+
+function goFoward() {
+  router.go(1)
+}
 </script>
 
 <template>
   <div :class="styles.main_container">
-
     <!-- left bar -->
     <div :class="styles.leftbar">
       <h3>Music App</h3>
@@ -80,8 +88,12 @@ onMounted(() => {
     <div :class="styles.content">
       <div :class="styles.login_link">
         <div>
-          <el-icon :size="20" style="margin-right: 30px"><ArrowLeft /></el-icon>
-          <el-icon :size="20"><ArrowRight /></el-icon>
+          <el-icon :size="20" style="margin-right: 30px; cursor: pointer" @click="goBack">
+            <ArrowLeft />
+          </el-icon>
+          <el-icon :size="20" style="cursor: pointer" @click="goFoward">
+            <ArrowRight />
+          </el-icon>
         </div>
         <div v-if="store.username" style="font-weight: bold; font-size: 25px">
           Hello, {{ store.username }}
@@ -91,12 +103,11 @@ onMounted(() => {
           <a @click="store.isModalOpen = true">
             <el-icon :size="20"><User /></el-icon>
           </a>
-          <LoginModal/>
+          <LoginModal />
         </div>
       </div>
 
       <RouterView />
-
     </div>
   </div>
 </template>

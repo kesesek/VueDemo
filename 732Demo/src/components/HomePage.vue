@@ -2,13 +2,6 @@
 import { RouterLink } from 'vue-router'
 import { albums, artists } from '../../public/dummyData.js'
 import styles from '../assets/scss/homepage.module.scss'
-
-defineProps({
-  username: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <template>

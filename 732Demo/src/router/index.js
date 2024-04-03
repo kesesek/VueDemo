@@ -34,7 +34,7 @@ const router = createRouter({
       path: '/personalized_picks',
       name: 'personalized_picks',
       component: OtherPages
-    },
+    }
   ]
 })
 
