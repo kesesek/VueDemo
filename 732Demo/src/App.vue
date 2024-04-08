@@ -6,6 +6,10 @@ import { store } from './store/store'
 import LoginModal from './components/LoginModal.vue'
 import styles from '../src/assets/scss/app.module.scss'
 
+/*
+useRoute() returns the current route location.
+useRouter returns the router instance.
+*/
 const route = useRoute()
 const router = useRouter()
 
