@@ -54,7 +54,7 @@ function goFoward() {
           </RouterLink>
 
           <RouterLink to="/radio">
-            <li>
+            <li :class="route.path.endsWith('/radio') ? styles.selected : ''">
               <el-icon :size="20" style="margin-right: 10px"><Headset /></el-icon>
               <p>Radio</p>
             </li>
@@ -66,21 +66,21 @@ function goFoward() {
       <h4>Library</h4>
       <ul>
         <RouterLink to="/playlists">
-          <li>
+          <li :class="route.path.endsWith('/playlists') ? styles.selected : ''">
             <el-icon :size="20" style="margin-right: 10px"><Guide /></el-icon>
             <p>Playlists</p>
           </li>
         </RouterLink>
 
         <RouterLink to="/songs">
-          <li>
+          <li :class="route.path.endsWith('/songs') ? styles.selected : ''">
             <el-icon :size="20" style="margin-right: 10px"><VideoPlay /></el-icon>
             <p>Songs</p>
           </li>
         </RouterLink>
 
         <RouterLink to="/personalized_picks">
-          <li>
+          <li :class="route.path.endsWith('/personalized_picks') ? styles.selected : ''">
             <el-icon :size="20" style="margin-right: 10px"><Star /></el-icon>
             <p>Personalized picks</p>
           </li>
