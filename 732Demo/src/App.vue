@@ -8,7 +8,7 @@ import styles from '../src/assets/scss/app.module.scss'
 
 /*
 useRoute() returns the current route location.
-useRouter returns the router instance.
+useRouter() returns the router instance.
 */
 const route = useRoute()
 const router = useRouter()

@@ -25,6 +25,11 @@ function close() {
 </script>
 
 <template>
+  <!-- In Vue, Teleport is a built-in component that allows us
+    to render parts of a child component's template to a specified
+    location outside the current Vue application's DOM tree.
+    Teleport can be used when you need to move a component to a
+    different part of the DOM to avoid issues with styling or layout. -->
   <Teleport to="body">
     <div v-if="store.isModalOpen" :class="styles.mask" @click="close"></div>
     <div v-if="store.isModalOpen" :class="styles.modal_container">
