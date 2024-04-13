@@ -1,5 +1,6 @@
 <h1>Welcome to Music App!</h1>
-This is a music website developed using Vue.js, Vue Router, SASS, and Element Plus.
+This is a music website developed using Vue.js, Vue Router, SASS, and Element Plus.  
+
 Follow these instructions to run this program on your device:
 
 ✨**Prerequisites**
@@ -55,7 +56,11 @@ Follow these instructions to run this program on your device:
 
 Enjoy exploring Music App!
 
-Official Websites:
-Vue.js: https://vuejs.org/
-Vue Router: https://router.vuejs.org/
-Element Plus: https://element-plus.org/en-US/
+Official Websites:  
+
+Vue.js: https://vuejs.org/  
+
+Vue Router: https://router.vuejs.org/  
+
+Element Plus: https://element-plus.org/en-US/  
+
