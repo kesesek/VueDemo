@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { albums, artists } from '../../public/dummyData.js'
+import { albums, artists } from '../assets/dummyData'
 import styles from '../assets/scss/homepage.module.scss'
 </script>
 
@@ -40,3 +40,4 @@ import styles from '../assets/scss/homepage.module.scss'
     </div>
   </div>
 </template>
+../assets/dummyData.js
